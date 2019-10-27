@@ -20,10 +20,6 @@
 module top (
     input CLK,
 
-    // hardware UART
-    output SER_TX,
-    input SER_RX,
-
     // onboard SPI flash interface
     output SPI_SS,
     output SPI_SCK,
@@ -97,18 +93,16 @@ module top (
 
 `ifdef gpio
     // GPIO buttons
-    inout  [7:0] BUTTONS,
+    inout  [1:0] BUTTONS,
 
     // onboard LED
     output LED,
 `endif
 
-    // onboard USB interface
-    output USBPU
+    // hardware UART
+    output SER_TX,
+    input SER_RX
 );
-    // Disable USB
-    assign USBPU = 1'b0;
-
     ///////////////////////////////////
     // Power-on Reset
     ///////////////////////////////////

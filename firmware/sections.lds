@@ -3,7 +3,7 @@ __stack_size = 0x400;; /* required amount of stack */
 
 MEMORY
 {
-    FLASH (rx)      : ORIGIN = 0x00050000, LENGTH = 0x100000 /* entire flash, 1 MiB */
+    FLASH (rx)      : ORIGIN = 0x00050000, LENGTH = 0x30000 /* entire flash */
     STACK (rw)      : ORIGIN = 0x00000000, LENGTH = 0x000400 /* 1024 bytes for stack (2 BRAMS) */
     RAM (xrw)       : ORIGIN = 0x00000400, LENGTH = 0x001000 /* 3072 bytes heap (6 BRAMS) */
 }
