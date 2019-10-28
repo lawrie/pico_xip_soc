@@ -106,7 +106,7 @@ module top (
     ///////////////////////////////////
     // Power-on Reset
     ///////////////////////////////////
-    reg [5:0] reset_cnt = 0;
+    reg [10:0] reset_cnt = 0;
     wire resetn = &reset_cnt;
 
     always @(posedge CLK) begin
