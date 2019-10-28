@@ -2,7 +2,8 @@ FIRMWARE_DIR = ../../firmware
 HDL_DIR = ../../hdl
 INCLUDE_DIR = ../../libraries
 VERILOG_FILES = \
-	$(HDL_DIR)/top.v \
+	$(HDL_DIR)/top16.v \
+	$(HDL_DIR)/pll.v \
 	$(HDL_DIR)/picosoc/memory/spimemio.v \
 	$(HDL_DIR)/picosoc/uart/simpleuart.v \
 	$(HDL_DIR)/picosoc/picosoc.v \
@@ -28,6 +29,6 @@ C_FILES = main.c song_pacman.c \
 	$(INCLUDE_DIR)/uart/uart.c \
   $(INCLUDE_DIR)/video/video.c \
 	$(INCLUDE_DIR)/nunchuk/nunchuk.c
-DEFINES = -Dpdm_audio -Dgpio -Dvga -Di2c
+DEFINES = -Dgpio -Dvga -Di2c
 
 include $(HDL_DIR)/tiny_soc.mk
